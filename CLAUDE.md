@@ -25,7 +25,7 @@ anon key and RLS; the panel reads/writes as an authenticated user.
 
 ## Database
 
-Schema already exists in Supabase — see `supabase-schema.sql` and `seed.sql` in the repo.
+Schema already exists in Supabase — see `db/supabase-schema.sql` and `db/seed.sql` in the repo.
 **Do not redesign it.** If a column is genuinely missing, add a migration file and say so;
 don't silently invent fields.
 
@@ -71,7 +71,7 @@ Panel (all under `/panel`, auth-gated by middleware):
 - Turkish number formatting: `12.500 TL`, dot as thousands separator. One helper,
   used everywhere.
 - Slugs are generated from cinsi + marka + model + ebat, ASCII-folded (ı→i, ğ→g, ü→u,
-  ş→s, ö→o, ç→c). Existing slugs in `seed.sql` must not change — they may already be
+  ş→s, ö→o, ç→c). Existing slugs in `db/seed.sql` must not change — they may already be
   shared as links.
 - WhatsApp CTA opens `wa.me/<number>?text=<encoded>` with the tool name and price
   pre-filled.

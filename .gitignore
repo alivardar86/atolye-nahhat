@@ -13,5 +13,9 @@ node_modules/
 # OS
 .DS_Store
 
+# Owner's personal working files (inventory spreadsheet, source photos) —
+# not part of the site, never committed
+Files/
+
 # Claude Code local settings (per-machine, not shared)
 .claude/settings.local.json
