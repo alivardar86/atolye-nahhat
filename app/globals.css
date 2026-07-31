@@ -1,26 +1,147 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/*
+ * Design tokens extracted from design/tasarim.html (Claude Design handoff).
+ * Hex values, font sizes, spacing and letter-spacing are copied exactly as
+ * they appear in the handoff — nothing rounded to a Tailwind default.
+ */
+@theme {
+  /* ---- Color ---- */
+  --color-ink: #17191A; /* primary text, logotype, buttons */
+  --color-body: #3C4145; /* secondary/body copy (paragraphs, notes) */
+  --color-muted: #6B7176; /* tertiary text, meta labels */
+  --color-placeholder: #8E938F; /* photo-placeholder captions */
+  --color-disabled: #9BA09C; /* dead/zero-count chip text */
+  --color-chip-count: #B9BCB6; /* count badge text on an active chip */
+  --color-border: #C9CBC4; /* hairline borders everywhere */
+  --color-bg: #DEDFD9; /* page background */
+  --color-placeholder-stripe: #DEDFDA; /* photo-placeholder diagonal stripe */
+  --color-panel: #E7E8E3; /* frame/section background */
+  --color-paper: #FAFAF8; /* card, input, button-on-dark surface */
+  --color-accent: #8A6B1E; /* gold — links, focus ring, discount, price emphasis */
+  --color-success: #3FA34D; /* WhatsApp availability dot */
+  --color-ink-hover: #000000; /* primary CTA hover background */
+
+  /* ---- Font families (see app/layout.tsx for next/font/google loading) ---- */
+  --font-sans: var(--font-archivo), system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), monospace;
+  --font-serif: var(--font-source-serif), Georgia, serif;
+
+  /* ---- Type scale (px, exact) ---- */
+  --text-2xs: 9px;
+  --text-xs: 10px;
+  --text-xs-plus: 10.5px;
+  --text-sm: 11px;
+  --text-sm-plus: 11.5px;
+  --text-base: 12px;
+  --text-base-plus: 12.5px;
+  --text-md: 13px;
+  --text-md-plus: 13.5px;
+  --text-lg: 14px;
+  --text-lg-plus: 15px;
+  --text-xl: 16px;
+  --text-xl-plus: 16.5px;
+  --text-2xl: 17px;
+  --text-2xl-plus: 17.5px;
+  --text-3xl: 18px;
+  --text-4xl: 19px;
+  --text-5xl: 24px;
+  --text-6xl: 27px;
+  --text-7xl: 28px;
+  --text-8xl: 34px;
+  --text-9xl: 38px;
+  --text-10xl: 44px;
+
+  /* ---- Letter spacing (em, exact) ---- */
+  --tracking-tightest: -0.03em; /* biggest price figures */
+  --tracking-tighter: -0.025em; /* desktop H1 / detail H2 */
+  --tracking-tight-lg: -0.022em; /* mobile H1 */
+  --tracking-tight: -0.02em; /* price / large brand name */
+  --tracking-snug: -0.012em; /* product-card brand name */
+  --tracking-snug-sm: -0.01em; /* logotype */
+  --tracking-wide-sm: 0.06em; /* footer meta */
+  --tracking-wide: 0.08em; /* nav meta */
+  --tracking-wide-md: 0.1em; /* mobile nav link / sort label */
+  --tracking-wide-lg: 0.12em; /* card eyebrow (category/no) */
+  --tracking-wide-lg-plus: 0.13em; /* chip label, mobile spec */
+  --tracking-eyebrow: 0.14em; /* standard uppercase section eyebrow */
+  --tracking-eyebrow-lg: 0.16em; /* frame index headers */
+
+  /* ---- Spacing (px, exact — kept separate from Tailwind's default
+     rem-based numeric scale to avoid silently overriding it) ---- */
+  --spacing-nh-1: 1px;
+  --spacing-nh-2: 2px;
+  --spacing-nh-3: 3px;
+  --spacing-nh-4: 4px;
+  --spacing-nh-5: 5px;
+  --spacing-nh-6: 6px;
+  --spacing-nh-7: 7px;
+  --spacing-nh-8: 8px;
+  --spacing-nh-9: 9px;
+  --spacing-nh-10: 10px;
+  --spacing-nh-11: 11px;
+  --spacing-nh-12: 12px;
+  --spacing-nh-14: 14px;
+  --spacing-nh-16: 16px;
+  --spacing-nh-18: 18px;
+  --spacing-nh-20: 20px;
+  --spacing-nh-22: 22px;
+  --spacing-nh-24: 24px;
+  --spacing-nh-26: 26px;
+  --spacing-nh-28: 28px;
+  --spacing-nh-40: 40px;
+  --spacing-nh-44: 44px;
+  --spacing-nh-48: 48px;
+  --spacing-nh-52: 52px;
+  --spacing-nh-56: 56px;
+  --spacing-nh-64: 64px;
+  --spacing-nh-96: 96px;
+
+  /* ---- Border radius ----
+     Tailwind v4's bare `--radius` variable is deprecated and no longer
+     drives the bare `rounded` utility, so we use named keys throughout:
+     `rounded-nh` and `rounded-pill`, never the bare `rounded`. */
+  --radius-nh: 2px; /* buttons, inputs, cards, tags — used everywhere */
+  --radius-pill: 10px; /* literal handoff value for the toggle-switch track */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+a {
+  color: var(--color-ink);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+input,
+button {
+  font: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-paper);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
 }

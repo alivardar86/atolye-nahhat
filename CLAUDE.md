@@ -86,10 +86,12 @@ Panel (all under `/panel`, auth-gated by middleware):
 ## Design
 
 The visual language comes from the Claude Design handoff bundle in `/design`. Follow its
-tokens (colors, type scale, spacing) exactly — extract them into
-`app/globals.css` and `tailwind.config.ts` rather than hardcoding values in components.
-Where the handoff is a static prototype, keep the visual result and rebuild the markup as
-proper React components wired to Supabase.
+tokens (colors, type scale, spacing) exactly — extract them into a `@theme` block in
+`app/globals.css` rather than hardcoding values in components. This project uses Tailwind
+v4, which reads design tokens straight from CSS custom properties instead of a
+`tailwind.config.ts` file; `@theme` *is* the config file now. Where the handoff is a static
+prototype, keep the visual result and rebuild the markup as proper React components wired
+to Supabase.
 
 ## Working style
 
