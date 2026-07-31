@@ -7,21 +7,22 @@
  */
 @theme {
   /* ---- Color ----
-     muted / placeholder / disabled darkened from the handoff for WCAG AA
-     (>=4.5:1 against their real backgrounds) — same hue/saturation, only
-     lightness reduced. */
+     muted / placeholder / disabled / border / accent darkened from the
+     handoff for WCAG AA — same hue/saturation, only lightness reduced.
+     `bg` is the worst-case background for all of these (lowest luminance
+     among bg/panel/paper), so each is tuned to clear its threshold there. */
   --color-ink: #17191A; /* primary text, logotype, buttons */
   --color-body: #3C4145; /* secondary/body copy (paragraphs, notes) */
   --color-muted: #5E6368; /* was #6B7176 — tertiary text, meta labels */
   --color-placeholder: #5F6460; /* was #8E938F — photo-placeholder captions */
   --color-disabled: #6F7571; /* was #9BA09C — dead/zero-count chip text */
   --color-chip-count: #B9BCB6; /* count badge text on an active (dark) chip — unchanged, already 9.18:1 there */
-  --color-border: #C9CBC4; /* hairline borders everywhere */
+  --color-border: #7C8071; /* was #C9CBC4 — hairline borders everywhere (UI element, >=3:1) */
   --color-bg: #DEDFD9; /* page background */
   --color-placeholder-stripe: #DEDFDA; /* photo-placeholder diagonal stripe */
   --color-panel: #E7E8E3; /* frame/section background */
   --color-paper: #FAFAF8; /* card, input, button-on-dark surface */
-  --color-accent: #8A6B1E; /* gold — links, focus ring, discount, price emphasis */
+  --color-accent: #7A5F1B; /* was #8A6B1E — gold, links/text (>=4.5:1) */
   --color-success: #3FA34D; /* WhatsApp availability dot */
   --color-ink-hover: #000000; /* primary CTA hover background */
 
