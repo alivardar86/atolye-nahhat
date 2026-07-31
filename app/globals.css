@@ -30,12 +30,18 @@
   --font-mono: var(--font-plex-mono), monospace;
   --font-serif: var(--font-source-serif), Georgia, serif;
 
-  /* ---- Type scale (px, exact) ---- */
-  --text-2xs: 9px;
-  --text-xs: 10px;
-  --text-xs-plus: 10.5px;
-  --text-sm: 11px;
-  --text-sm-plus: 11.5px;
+  /* ---- Type scale (px, exact) ----
+     The handoff's five sub-12px steps (9/10/10.5/11/11.5px) all carry real
+     information in the design (part labels, category/spec eyebrows, condition
+     text, footer/address text) rather than being purely decorative, so per
+     the 12px accessibility floor they're raised to 12px here. Names are kept
+     as-is for now since components may still want to reference them
+     semantically; they currently alias --text-base. */
+  --text-2xs: 12px; /* was 9px — photo-part labels (AĞIZ/TABAN/MARKA/KUSUR) */
+  --text-xs: 12px; /* was 10px — photo/card eyebrow labels */
+  --text-xs-plus: 12px; /* was 10.5px — stats-bar labels, section eyebrows */
+  --text-sm: 12px; /* was 11px — nav tagline, spec text, footer, back-link */
+  --text-sm-plus: 12px; /* was 11.5px — condition text, footer subtext */
   --text-base: 12px;
   --text-base-plus: 12.5px;
   --text-md: 13px;
