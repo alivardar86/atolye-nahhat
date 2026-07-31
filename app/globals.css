@@ -61,20 +61,22 @@
   --text-9xl: 38px;
   --text-10xl: 44px;
 
-  /* ---- Letter spacing (em, exact) ---- */
-  --tracking-tightest: -0.03em; /* biggest price figures */
-  --tracking-tighter: -0.025em; /* desktop H1 / detail H2 */
-  --tracking-tight-lg: -0.022em; /* mobile H1 */
-  --tracking-tight: -0.02em; /* price / large brand name */
-  --tracking-snug: -0.012em; /* product-card brand name */
-  --tracking-snug-sm: -0.01em; /* logotype */
-  --tracking-wide-sm: 0.06em; /* footer meta */
-  --tracking-wide: 0.08em; /* nav meta */
-  --tracking-wide-md: 0.1em; /* mobile nav link / sort label */
-  --tracking-wide-lg: 0.12em; /* card eyebrow (category/no) */
-  --tracking-wide-lg-plus: 0.13em; /* chip label, mobile spec */
-  --tracking-eyebrow: 0.14em; /* standard uppercase section eyebrow */
-  --tracking-eyebrow-lg: 0.16em; /* frame index headers */
+  /* ---- Letter spacing (em, exact — `nh-` prefixed, like spacing, so
+     Tailwind's built-in tracking-tight / tracking-wide / etc. keep their
+     stock meaning instead of being overridden) ---- */
+  --tracking-nh-tightest: -0.03em; /* biggest price figures */
+  --tracking-nh-tighter: -0.025em; /* desktop H1 / detail H2 */
+  --tracking-nh-tight-lg: -0.022em; /* mobile H1 */
+  --tracking-nh-tight: -0.02em; /* price / large brand name */
+  --tracking-nh-snug: -0.012em; /* product-card brand name */
+  --tracking-nh-snug-sm: -0.01em; /* logotype */
+  --tracking-nh-wide-sm: 0.06em; /* footer meta */
+  --tracking-nh-wide: 0.08em; /* nav meta */
+  --tracking-nh-wide-md: 0.1em; /* mobile nav link / sort label */
+  --tracking-nh-wide-lg: 0.12em; /* card eyebrow (category/no) */
+  --tracking-nh-wide-lg-plus: 0.13em; /* chip label, mobile spec */
+  --tracking-nh-eyebrow: 0.14em; /* standard uppercase section eyebrow */
+  --tracking-nh-eyebrow-lg: 0.16em; /* frame index headers */
 
   /* ---- Spacing (px, exact — kept separate from Tailwind's default
      rem-based numeric scale to avoid silently overriding it) ---- */
