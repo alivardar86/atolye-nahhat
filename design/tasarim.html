@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@1,8..60,400&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; background: #DEDFD9; }
+  * { box-sizing: border-box; }
+  a { color: #17191A; text-decoration: none; }
+  a:hover { color: #8A6B1E; }
+  input, button { font: inherit; }
+  :focus-visible { outline: 2px solid #8A6B1E; outline-offset: 2px; }
+  ::selection { background: #8A6B1E; color: #FAFAF8; }
+  .nh-scroll::-webkit-scrollbar { height: 0; width: 0; }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+</style>
+</helmet>
+
+<div style="display:flex; flex-direction:column; align-items:center; gap:56px; padding:48px 40px 96px; font-family:Archivo, system-ui, sans-serif; color:#17191A;">
+
+  <div style="width:1440px; flex:0 0 auto; display:flex; align-items:baseline; gap:16px; border-bottom:1px solid #C9CBC4; padding-bottom:12px;">
+    <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.14em; text-transform:uppercase; color:#17191A;">Atölye Nahhat</span>
+    <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.14em; text-transform:uppercase; color:#6B7176;">Katalog · birinci geçiş · masaüstü + mobil</span>
+  </div>
+
+  <!-- ══════════ DESKTOP HOME ══════════ -->
+  <div style="width:1440px; flex:0 0 auto;">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:#6B7176; margin-bottom:10px;">01 · Ana sayfa / katalog — 1440</div>
+    <div style="width:100%; background:#E7E8E3; border:1px solid #C9CBC4;">
+
+      <div style="display:flex; align-items:center; justify-content:space-between; padding:0 40px; height:64px; border-bottom:1px solid #C9CBC4;">
+        <div style="display:flex; align-items:baseline; gap:14px;">
+          <span style="font-size:19px; font-weight:800; letter-spacing:-0.01em;">ATÖLYE NAHHAT</span>
+          <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#6B7176; letter-spacing:0.08em;">nahhat · ahşap oyan, yontan</span>
+        </div>
+        <div style="display:flex; align-items:center; gap:28px; font-size:14px;">
+          <a href="#" style="color:#17191A;">Katalog</a>
+          <a href="#" style="color:#6B7176;">Hakkında</a>
+          <a href="#" style="display:flex; align-items:center; gap:8px; background:#17191A; color:#FAFAF8; padding:9px 16px; border-radius:2px; font-size:13px; font-weight:600;"><span style="width:6px;height:6px;border-radius:50%;background:#3FA34D;display:inline-block;"></span>WhatsApp</a>
+        </div>
+      </div>
+
+      <div style="display:grid; grid-template-columns:1.15fr 1fr; gap:64px; padding:52px 40px 44px; border-bottom:1px solid #C9CBC4;">
+        <div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:#8A6B1E; margin-bottom:18px;">Atölye kapanıyor · envanter satışı</div>
+          <h1 style="margin:0; font-size:44px; line-height:1.08; font-weight:700; letter-spacing:-0.025em; max-width:15ch; text-wrap:balance;">Otuz iki yıl bu aletlerle çalıştım. Şimdi sırası gelen ustaya bırakıyorum.</h1>
+          <p style="margin:22px 0 0; font-family:'Source Serif 4',Georgia,serif; font-style:italic; font-size:18px; line-height:1.55; color:#3C4145; max-width:52ch;">Hepsini tek tek elimden geçirdim, bilediklerini biledim, kırığını çıkığını yazdım. Fiyatları bugün Türkiye’de internetten ne kadara alınıyorsa ona göre koydum — çoğu daha ucuz.</p>
+        </div>
+        <div style="display:flex; flex-direction:column; justify-content:flex-end; gap:0; border-left:1px solid #C9CBC4; padding-left:40px;">
+          <div style="display:flex; justify-content:space-between; padding:11px 0; border-bottom:1px solid #C9CBC4; font-family:'IBM Plex Mono',monospace; font-size:13px;"><span style="color:#6B7176;">Toplam kayıt</span><span>108</span></div>
+          <div style="display:flex; justify-content:space-between; padding:11px 0; border-bottom:1px solid #C9CBC4; font-family:'IBM Plex Mono',monospace; font-size:13px;"><span style="color:#6B7176;">Satılık</span><span style="font-weight:600;">54</span></div>
+          <div style="display:flex; justify-content:space-between; padding:11px 0; border-bottom:1px solid #C9CBC4; font-family:'IBM Plex Mono',monospace; font-size:13px;"><span style="color:#6B7176;">Ayrıldı</span><span>7</span></div>
+          <div style="display:flex; justify-content:space-between; padding:11px 0; border-bottom:1px solid #C9CBC4; font-family:'IBM Plex Mono',monospace; font-size:13px;"><span style="color:#6B7176;">Satıldı</span><span>47</span></div>
+          <div style="display:flex; justify-content:space-between; padding:11px 0; font-family:'IBM Plex Mono',monospace; font-size:13px;"><span style="color:#6B7176;">45 alet piyasanın altında</span><span style="color:#8A6B1E; font-weight:600;">ort. −32%</span></div>
+        </div>
+      </div>
+
+      <div style="position:sticky; top:0; z-index:5; background:#E7E8E3; border-bottom:1px solid #C9CBC4; padding:14px 40px; display:flex; align-items:center; gap:14px; flex-wrap:wrap;">
+        <div style="display:flex; gap:8px; flex-wrap:wrap;">
+          <sc-for list="{{ cats }}" as="c" hint-placeholder-count="7">
+            <button type="button" onClick="{{ c.pick }}" style="{{ c.chipStyle }}">
+              <span>{{ c.label }}</span>
+              <span style="{{ c.countStyle }}">{{ c.count }}</span>
+            </button>
+          </sc-for>
+        </div>
+        <div style="flex:1; min-width:180px;"></div>
+        <div style="display:flex; align-items:center; gap:8px; background:#FAFAF8; border:1px solid #C9CBC4; border-radius:2px; padding:0 12px; height:36px; width:260px;">
+          <span style="font-family:'IBM Plex Mono',monospace; font-size:13px; color:#6B7176;">/</span>
+          <input type="search" placeholder="marka, model veya tip ara" onInput="{{ onSearch }}" style="border:0; background:transparent; outline:none; width:100%; font-size:14px; color:#17191A;">
+        </div>
+        <div style="display:flex; border:1px solid #C9CBC4; border-radius:2px; overflow:hidden; height:36px;">
+          <button type="button" onClick="{{ sortAsc }}" style="{{ sortAscStyle }}">Fiyat ↑</button>
+          <button type="button" onClick="{{ sortDesc }}" style="{{ sortDescStyle }}">Fiyat ↓</button>
+        </div>
+        <button type="button" onClick="{{ toggleSold }}" style="display:flex; align-items:center; gap:9px; height:36px; padding:0 12px; background:transparent; border:1px solid #C9CBC4; border-radius:2px; cursor:pointer; font-size:13px; color:#17191A;">
+          <span style="{{ switchTrack }}"><span style="{{ switchKnob }}"></span></span>
+          Satılanları da göster
+        </button>
+      </div>
+
+      <div style="padding:12px 40px 8px; display:flex; justify-content:space-between; align-items:baseline;">
+        <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#6B7176;">{{ resultLine }}</span>
+        <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#6B7176;">{{ totalLine }}</span>
+      </div>
+
+      <div style="padding:12px 40px 56px; display:grid; grid-template-columns:repeat(auto-fill, minmax(272px, 1fr)); gap:16px; align-items:start;">
+        <sc-for list="{{ items }}" as="it" hint-placeholder-count="8">
+          <a href="#" style="{{ it.wrapStyle }}">
+            <div style="{{ it.photoStyle }}">
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.12em; color:#8E938F;">{{ it.photoLabel }}</span>
+              <sc-if value="{{ it.stockTag }}" hint-placeholder-val="{{ false }}">
+                <span style="{{ it.stockStyle }}">{{ it.stockTag }}</span>
+              </sc-if>
+            </div>
+            <div style="padding:14px 16px 16px; display:flex; flex-direction:column; gap:9px; flex:1;">
+              <div style="display:flex; justify-content:space-between; font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.13em; text-transform:uppercase; color:#6B7176;">
+                <span>{{ it.cat }}</span><span>{{ it.no }}</span>
+              </div>
+              <div>
+                <div style="font-size:16px; font-weight:700; letter-spacing:-0.012em; line-height:1.2;">{{ it.brand }}</div>
+                <div style="font-size:14px; color:#3C4145; line-height:1.3; margin-top:2px;">{{ it.model }}</div>
+              </div>
+              <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; line-height:1.45; color:#6B7176; word-break:break-word;">{{ it.spec }}</div>
+              <div style="display:flex; align-items:center; gap:7px; font-size:11.5px; color:#3C4145; margin-top:auto; padding-top:6px;">
+                <span style="{{ it.dotStyle }}"></span>{{ it.cond }}
+              </div>
+              <div style="border-top:1px solid #C9CBC4; padding-top:10px; display:flex; align-items:baseline; gap:10px; flex-wrap:wrap;">
+                <span style="font-family:'IBM Plex Mono',monospace; font-size:19px; font-weight:600; letter-spacing:-0.02em;">{{ it.priceFmt }}</span>
+                <sc-if value="{{ it.showCmp }}" hint-placeholder-val="{{ true }}">
+                  <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#6B7176; text-decoration:line-through;">{{ it.marketFmt }}</span>
+                </sc-if>
+                <sc-if value="{{ it.showCmp }}" hint-placeholder-val="{{ true }}">
+                  <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; font-weight:600; color:#8A6B1E; margin-left:auto;">{{ it.disc }}</span>
+                </sc-if>
+              </div>
+            </div>
+          </a>
+        </sc-for>
+      </div>
+
+      <div style="padding:26px 40px 40px; border-top:1px solid #C9CBC4; display:flex; justify-content:space-between; font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:#6B7176; letter-spacing:0.06em;">
+        <span>ATÖLYENAHHAT.COM · İZMİR</span><span>Tek satıcı, tek numara. Pazarlık için yazın.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════ DESKTOP DETAIL ══════════ -->
+  <div style="width:1440px; flex:0 0 auto;">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:#6B7176; margin-bottom:10px;">02 · Ürün detayı /urun/stanley-no-5-rende — 1440</div>
+    <div style="width:100%; background:#E7E8E3; border:1px solid #C9CBC4;">
+      <div style="display:flex; align-items:center; justify-content:space-between; padding:0 40px; height:64px; border-bottom:1px solid #C9CBC4;">
+        <div style="display:flex; align-items:baseline; gap:14px;">
+          <span style="font-size:19px; font-weight:800; letter-spacing:-0.01em;">ATÖLYE NAHHAT</span>
+          <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#6B7176;">← Katalog / Rendeler</span>
+        </div>
+        <a href="#" style="display:flex; align-items:center; gap:8px; background:#17191A; color:#FAFAF8; padding:9px 16px; border-radius:2px; font-size:13px; font-weight:600;"><span style="width:6px;height:6px;border-radius:50%;background:#3FA34D;display:inline-block;"></span>WhatsApp</a>
+      </div>
+
+      <div style="display:grid; grid-template-columns:1.05fr 1fr; gap:56px; padding:40px;">
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <div style="aspect-ratio:4/5; background:repeating-linear-gradient(135deg,#DEDFDA 0 7px,#E7E8E3 7px 14px); border:1px solid #C9CBC4; display:flex; align-items:center; justify-content:center;">
+            <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.14em; color:#8E938F;">FOTO 1/5 · 4:5 · TÜM ALET</span>
+          </div>
+          <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:12px;">
+            <div style="aspect-ratio:1; background:repeating-linear-gradient(135deg,#DEDFDA 0 6px,#E7E8E3 6px 12px); border:1px solid #17191A; display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono',monospace; font-size:9px; color:#8E938F;">AĞIZ</div>
+            <div style="aspect-ratio:1; background:repeating-linear-gradient(135deg,#DEDFDA 0 6px,#E7E8E3 6px 12px); border:1px solid #C9CBC4; display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono',monospace; font-size:9px; color:#8E938F;">TABAN</div>
+            <div style="aspect-ratio:1; background:repeating-linear-gradient(135deg,#DEDFDA 0 6px,#E7E8E3 6px 12px); border:1px solid #C9CBC4; display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono',monospace; font-size:9px; color:#8E938F;">MARKA</div>
+            <div style="aspect-ratio:1; background:repeating-linear-gradient(135deg,#DEDFDA 0 6px,#E7E8E3 6px 12px); border:1px solid #C9CBC4; display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono',monospace; font-size:9px; color:#8E938F;">KUSUR</div>
+          </div>
+        </div>
+
+        <div style="display:flex; flex-direction:column;">
+          <div style="display:flex; justify-content:space-between; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#6B7176;">
+            <span>Rendeler</span><span>NHT-001</span>
+          </div>
+          <h2 style="margin:12px 0 0; font-size:38px; line-height:1.05; font-weight:700; letter-spacing:-0.025em;">Stanley No 5<br><span style="font-weight:400; font-size:24px; color:#3C4145; letter-spacing:-0.01em;">Ahşap Rendesi</span></h2>
+
+          <div style="margin:26px 0 0; background:#FAFAF8; border:1px solid #C9CBC4; border-radius:2px; padding:22px 24px;">
+            <div style="display:flex; align-items:flex-end; gap:16px; flex-wrap:wrap;">
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:44px; font-weight:600; line-height:1; letter-spacing:-0.03em;">5.000 TL</span>
+              <span style="display:flex; align-items:center; gap:8px; padding-bottom:5px;">
+                <span style="font-family:'IBM Plex Mono',monospace; font-size:15px; color:#6B7176; text-decoration:line-through;">7.500 TL</span>
+                <span style="font-family:'IBM Plex Mono',monospace; font-size:13px; font-weight:600; color:#8A6B1E; border:1px solid #8A6B1E; border-radius:2px; padding:2px 7px;">−33%</span>
+              </span>
+            </div>
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:#6B7176; margin-top:12px; line-height:1.5;">Aynı rende bugün internette 7.500 TL. Karşılaştırma fiyatı 12.03.2026’da not edildi.</div>
+            <a href="#" style="margin-top:18px; display:flex; align-items:center; justify-content:center; gap:10px; background:#17191A; color:#FAFAF8; height:52px; border-radius:2px; font-size:16px; font-weight:600;" style-hover="background:#000;">
+              <span style="width:8px;height:8px;border-radius:50%;background:#3FA34D;display:inline-block;"></span>WhatsApp’tan sor — Fehmi Usta
+            </a>
+            <div style="text-align:center; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#6B7176; margin-top:10px;">Telefonu kendi açar. Genelde 1 saat içinde döner.</div>
+          </div>
+
+          <div style="margin-top:28px; border-top:1px solid #C9CBC4;">
+            <sc-for list="{{ specs }}" as="s" hint-placeholder-count="6">
+              <div style="display:flex; justify-content:space-between; gap:24px; padding:11px 0; border-bottom:1px solid #C9CBC4;">
+                <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:#6B7176;">{{ s.k }}</span>
+                <span style="font-family:'IBM Plex Mono',monospace; font-size:13.5px; text-align:right;">{{ s.v }}</span>
+              </div>
+            </sc-for>
+          </div>
+
+          <div style="margin-top:26px;">
+            <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#6B7176; margin-bottom:8px;">Sahibinin notu</div>
+            <p style="margin:0; font-family:'Source Serif 4',Georgia,serif; font-style:italic; font-size:17.5px; line-height:1.6; color:#3C4145;">Bu rendeyi 1998’de aldım, kaba düzlemede hep bunu kullandım. Tabanı bir kere taşlattım, ağzı tam düz. Bıçak orijinal değil, Hock bıçak taktım — daha iyisidir. Sapında yıllardan kalma bir çatlak var, işlevine etkisi yok, fotoğrafta gösterdim.</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="border-top:1px solid #C9CBC4; padding:28px 40px 44px;">
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#6B7176; margin-bottom:14px;">Benzer aletler · Rendeler</div>
+        <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(272px, 1fr)); gap:16px; align-items:start;">
+          <sc-for list="{{ similar }}" as="it" hint-placeholder-count="2">
+            <a href="#" style="{{ it.wrapStyle }}">
+              <div style="{{ it.photoStyle }}">
+                <span style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.12em; color:#8E938F;">{{ it.photoLabel }}</span>
+                <sc-if value="{{ it.stockTag }}" hint-placeholder-val="{{ false }}">
+                  <span style="{{ it.stockStyle }}">{{ it.stockTag }}</span>
+                </sc-if>
+              </div>
+              <div style="padding:12px 14px 14px; display:flex; flex-direction:column; gap:6px;">
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.13em; text-transform:uppercase; color:#6B7176;">{{ it.no }}</div>
+                <div style="font-size:15px; font-weight:700; line-height:1.2;">{{ it.brand }}</div>
+                <div style="font-size:13px; color:#3C4145;">{{ it.model }}</div>
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:17px; font-weight:600; margin-top:4px;">{{ it.priceFmt }}</div>
+              </div>
+            </a>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════ MOBILE ══════════ -->
+  <div style="display:flex; gap:40px; flex-wrap:wrap; justify-content:center;">
+
+    <div>
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:#6B7176; margin-bottom:10px;">03 · Katalog — 390</div>
+      <div class="nh-scroll" style="width:390px; height:844px; overflow-y:auto; background:#E7E8E3; border:1px solid #C9CBC4;">
+        <div style="position:sticky; top:0; z-index:6; background:#E7E8E3; border-bottom:1px solid #C9CBC4;">
+          <div style="display:flex; align-items:center; justify-content:space-between; padding:0 16px; height:52px;">
+            <span style="font-size:15px; font-weight:800; letter-spacing:-0.01em;">ATÖLYE NAHHAT</span>
+            <a href="#" style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#6B7176; letter-spacing:0.1em;">HAKKINDA</a>
+          </div>
+        </div>
+
+        <div style="padding:22px 16px 20px; border-bottom:1px solid #C9CBC4;">
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:#8A6B1E; margin-bottom:12px;">Atölye kapanıyor · envanter satışı</div>
+          <h1 style="margin:0; font-size:27px; line-height:1.12; font-weight:700; letter-spacing:-0.022em; text-wrap:balance;">Otuz iki yıl bu aletlerle çalıştım. Şimdi sırası gelen ustaya bırakıyorum.</h1>
+          <p style="margin:14px 0 0; font-family:'Source Serif 4',Georgia,serif; font-style:italic; font-size:16px; line-height:1.5; color:#3C4145;">Hepsini elimden geçirdim. Fiyatları bugün internette ne kadara alınıyorsa ona göre koydum.</p>
+          <div style="display:flex; gap:0; margin-top:18px; border-top:1px solid #C9CBC4; font-family:'IBM Plex Mono',monospace; font-size:12px;">
+            <div style="flex:1; padding-top:10px;"><div style="font-weight:600; font-size:15px;">54</div><div style="color:#6B7176; font-size:10.5px; letter-spacing:0.08em;">SATILIK</div></div>
+            <div style="flex:1; padding-top:10px;"><div style="font-weight:600; font-size:15px;">47</div><div style="color:#6B7176; font-size:10.5px; letter-spacing:0.08em;">SATILDI</div></div>
+            <div style="flex:1.4; padding-top:10px;"><div style="font-weight:600; font-size:15px; color:#8A6B1E;">ort. −32%</div><div style="color:#6B7176; font-size:10.5px; letter-spacing:0.08em;">PİYASAYA GÖRE</div></div>
+          </div>
+        </div>
+
+        <div style="position:sticky; top:52px; z-index:5; background:#E7E8E3; border-bottom:1px solid #C9CBC4; padding:12px 0 10px;">
+          <div class="nh-scroll" style="display:flex; gap:8px; overflow-x:auto; padding:0 16px 2px;">
+            <sc-for list="{{ mCats }}" as="c" hint-placeholder-count="7">
+              <button type="button" onClick="{{ c.pick }}" style="{{ c.chipStyle }}">
+                <span>{{ c.label }}</span>
+                <span style="{{ c.countStyle }}">{{ c.count }}</span>
+              </button>
+            </sc-for>
+          </div>
+          <div style="display:flex; gap:8px; padding:10px 16px 0;">
+            <div style="display:flex; align-items:center; gap:8px; background:#FAFAF8; border:1px solid #C9CBC4; border-radius:2px; padding:0 10px; height:44px; flex:1;">
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:13px; color:#6B7176;">/</span>
+              <input type="search" placeholder="ara" onInput="{{ onSearchM }}" style="border:0; background:transparent; outline:none; width:100%; font-size:15px;">
+            </div>
+            <button type="button" onClick="{{ mSortToggle }}" style="height:44px; min-width:80px; padding:0 12px; background:#FAFAF8; border:1px solid #C9CBC4; border-radius:2px; font-family:'IBM Plex Mono',monospace; font-size:13px; cursor:pointer;">{{ mSortLabel }}</button>
+          </div>
+          <button type="button" onClick="{{ mToggleSold }}" style="display:flex; align-items:center; gap:10px; margin:10px 16px 0; height:44px; width:calc(100% - 32px); padding:0 12px; background:transparent; border:1px solid #C9CBC4; border-radius:2px; cursor:pointer; font-size:14px; color:#17191A;">
+            <span style="{{ mSwitchTrack }}"><span style="{{ mSwitchKnob }}"></span></span>
+            Satılanları da göster
+            <span style="margin-left:auto; font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:#6B7176;">47 satıldı</span>
+          </button>
+        </div>
+
+        <div style="padding:12px 16px 8px; font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:#6B7176;">{{ mResultLine }}</div>
+
+        <div style="display:grid; grid-template-columns:1fr; gap:1px; background:#C9CBC4; border-top:1px solid #C9CBC4; border-bottom:1px solid #C9CBC4;">
+          <sc-for list="{{ mItems }}" as="it" hint-placeholder-count="6">
+            <a href="#" style="{{ it.rowStyle }}">
+              <div style="{{ it.thumbStyle }}">
+                <span style="font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:0.1em; color:#8E938F;">4:5</span>
+                <sc-if value="{{ it.stockTag }}" hint-placeholder-val="{{ false }}">
+                  <span style="{{ it.stockStyle }}">{{ it.stockTag }}</span>
+                </sc-if>
+              </div>
+              <div style="flex:1; min-width:0; display:flex; flex-direction:column; gap:5px;">
+                <div style="display:flex; justify-content:space-between; font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:#6B7176;">
+                  <span>{{ it.cat }}</span><span>{{ it.no }}</span>
+                </div>
+                <div style="font-size:16px; font-weight:700; line-height:1.15;">{{ it.brand }}</div>
+                <div style="font-size:13.5px; color:#3C4145; line-height:1.25;">{{ it.model }}</div>
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#6B7176; line-height:1.4; word-break:break-word;">{{ it.spec }}</div>
+                <div style="display:flex; align-items:center; gap:6px; font-size:11.5px; color:#3C4145;"><span style="{{ it.dotStyle }}"></span>{{ it.cond }}</div>
+                <div style="display:flex; align-items:baseline; gap:9px; border-top:1px solid #C9CBC4; padding-top:8px; margin-top:2px;">
+                  <span style="font-family:'IBM Plex Mono',monospace; font-size:18px; font-weight:600; letter-spacing:-0.02em;">{{ it.priceFmt }}</span>
+                  <sc-if value="{{ it.showCmp }}" hint-placeholder-val="{{ true }}">
+                    <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#6B7176; text-decoration:line-through;">{{ it.marketFmt }}</span>
+                  </sc-if>
+                  <sc-if value="{{ it.showCmp }}" hint-placeholder-val="{{ true }}">
+                    <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; font-weight:600; color:#8A6B1E; margin-left:auto;">{{ it.disc }}</span>
+                  </sc-if>
+                </div>
+              </div>
+            </a>
+          </sc-for>
+        </div>
+        <div style="padding:22px 16px 40px; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#6B7176; letter-spacing:0.06em;">ATÖLYENAHHAT.COM · İZMİR</div>
+      </div>
+    </div>
+
+    <div>
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:#6B7176; margin-bottom:10px;">04 · Ürün detayı — 390</div>
+      <div class="nh-scroll" style="width:390px; height:844px; overflow-y:auto; background:#E7E8E3; border:1px solid #C9CBC4; position:relative;">
+        <div style="position:sticky; top:0; z-index:6; background:#E7E8E3; border-bottom:1px solid #C9CBC4; display:flex; align-items:center; gap:10px; padding:0 16px; height:52px;">
+          <span style="font-family:'IBM Plex Mono',monospace; font-size:13px;">←</span>
+          <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:#6B7176;">Rendeler · NHT-001</span>
+        </div>
+
+        <div class="nh-scroll" style="display:flex; gap:2px; overflow-x:auto; scroll-snap-type:x mandatory;">
+          <div style="flex:0 0 100%; scroll-snap-align:start; aspect-ratio:4/5; background:repeating-linear-gradient(135deg,#DEDFDA 0 7px,#E7E8E3 7px 14px); display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.12em; color:#8E938F;">FOTO 1/5 · TÜM ALET</div>
+          <div style="flex:0 0 100%; scroll-snap-align:start; aspect-ratio:4/5; background:repeating-linear-gradient(135deg,#DEDFDA 0 7px,#E7E8E3 7px 14px); display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.12em; color:#8E938F;">FOTO 2/5 · AĞIZ</div>
+        </div>
+        <div style="display:flex; gap:5px; justify-content:center; padding:10px 0 0;">
+          <span style="width:18px;height:2px;background:#17191A;"></span>
+          <span style="width:18px;height:2px;background:#C9CBC4;"></span>
+          <span style="width:18px;height:2px;background:#C9CBC4;"></span>
+          <span style="width:18px;height:2px;background:#C9CBC4;"></span>
+          <span style="width:18px;height:2px;background:#C9CBC4;"></span>
+        </div>
+
+        <div style="padding:18px 16px 0;">
+          <h2 style="margin:0; font-size:28px; line-height:1.08; font-weight:700; letter-spacing:-0.025em;">Stanley No 5</h2>
+          <div style="font-size:18px; color:#3C4145; margin-top:3px;">Ahşap Rendesi</div>
+          <div style="display:flex; align-items:center; gap:7px; font-size:13px; color:#3C4145; margin-top:12px;"><span style="width:8px;height:8px;border-radius:50%;border:1.5px solid #6B7176;display:inline-block;"></span>Kullanılmış</div>
+        </div>
+
+        <div style="margin:18px 16px 0; background:#FAFAF8; border:1px solid #C9CBC4; border-radius:2px; padding:16px;">
+          <div style="display:flex; align-items:flex-end; gap:12px; flex-wrap:wrap;">
+            <span style="font-family:'IBM Plex Mono',monospace; font-size:34px; font-weight:600; line-height:1; letter-spacing:-0.03em;">5.000 TL</span>
+            <span style="display:flex; align-items:center; gap:7px; padding-bottom:3px;">
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:14px; color:#6B7176; text-decoration:line-through;">7.500 TL</span>
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; font-weight:600; color:#8A6B1E; border:1px solid #8A6B1E; border-radius:2px; padding:1px 6px;">−33%</span>
+            </span>
+          </div>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#6B7176; margin-top:10px; line-height:1.5;">Aynı rende bugün internette 7.500 TL.</div>
+        </div>
+
+        <div style="margin:22px 16px 0; border-top:1px solid #C9CBC4;">
+          <sc-for list="{{ specs }}" as="s" hint-placeholder-count="6">
+            <div style="display:flex; justify-content:space-between; gap:16px; padding:10px 0; border-bottom:1px solid #C9CBC4;">
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:0.12em; text-transform:uppercase; color:#6B7176;">{{ s.k }}</span>
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:13px; text-align:right;">{{ s.v }}</span>
+            </div>
+          </sc-for>
+        </div>
+
+        <div style="padding:20px 16px 0;">
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:0.14em; text-transform:uppercase; color:#6B7176; margin-bottom:8px;">Sahibinin notu</div>
+          <p style="margin:0; font-family:'Source Serif 4',Georgia,serif; font-style:italic; font-size:16.5px; line-height:1.6; color:#3C4145;">Bu rendeyi 1998’de aldım, kaba düzlemede hep bunu kullandım. Tabanı bir kere taşlattım, ağzı tam düz. Bıçak orijinal değil, Hock bıçak taktım. Sapındaki çatlağı fotoğrafta gösterdim.</p>
+        </div>
+
+        <div style="padding:24px 16px 0;">
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:0.14em; text-transform:uppercase; color:#6B7176; margin-bottom:10px;">Benzer aletler</div>
+          <div class="nh-scroll" style="display:flex; gap:10px; overflow-x:auto; padding-bottom:4px;">
+            <sc-for list="{{ similar }}" as="it" hint-placeholder-count="3">
+              <a href="#" style="flex:0 0 156px; background:#FAFAF8; border:1px solid #C9CBC4; border-radius:2px; display:block;">
+                <div style="aspect-ratio:4/5; background:repeating-linear-gradient(135deg,#DEDFDA 0 6px,#E7E8E3 6px 12px); border-bottom:1px solid #C9CBC4;"></div>
+                <div style="padding:10px;">
+                  <div style="font-size:14px; font-weight:700; line-height:1.15;">{{ it.brand }}</div>
+                  <div style="font-size:12.5px; color:#3C4145;">{{ it.model }}</div>
+                  <div style="font-family:'IBM Plex Mono',monospace; font-size:15px; font-weight:600; margin-top:6px;">{{ it.priceFmt }}</div>
+                </div>
+              </a>
+            </sc-for>
+          </div>
+        </div>
+
+        <div style="height:110px;"></div>
+
+        <div style="position:sticky; bottom:0; background:#E7E8E3; border-top:1px solid #C9CBC4; padding:12px 16px 16px;">
+          <a href="#" style="display:flex; align-items:center; justify-content:center; gap:10px; background:#17191A; color:#FAFAF8; height:54px; border-radius:2px; font-size:16px; font-weight:600;">
+            <span style="width:8px;height:8px;border-radius:50%;background:#3FA34D;display:inline-block;"></span>WhatsApp’tan sor · 5.000 TL
+          </a>
+          <div style="text-align:center; font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:#6B7176; margin-top:8px;">Mesaj hazır gelir: “Stanley No 5 rende hâlâ satılık mı?”</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showSoldDefault&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Katalog davranışı&quot;},&quot;showMarketCompare&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Katalog davranışı&quot;},&quot;showInventoryNumbers&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Katalog davranışı&quot;}}">
+class Component extends DCLogic {
+  state = { cat: 'tumu', q: '', sort: 'asc', sold: false, mcat: 'tumu', mq: '', msort: 'asc', msold: false };
+
+  data() {
+    return [
+      { no:'NHT-001', cat:'Rendeler', brand:'Stanley', model:'No 5 Ahşap Rendesi', spec:'360 × 60 × 130 mm · dökme demir', cond:'Kullanılmış', price:5000, market:7500, cmp:true, stock:'satilik' },
+      { no:'NHT-007', cat:'El Testereleri', brand:'Suizan', model:'Dozuki', spec:'24 cm · sırtlı Japon testere', cond:'Kullanılmış', price:4500, market:6200, cmp:true, stock:'satilik' },
+      { no:'NHT-014', cat:'Iskarpelalar', brand:'Kirschen Two Cherries', model:'Düz Set 6’lı', spec:'6/10/12/16/20/26 mm · kayın sap', cond:'Az kullanılmış', price:8500, market:11250, cmp:true, stock:'satilik' },
+      { no:'NHT-016', cat:'Iskarpelalar', brand:'Narex', model:'Düz Set 12’li', spec:'38/32/24/22/20/18/16/14/12/10/8/6 mm', cond:'Az kullanılmış', price:9750, market:12400, cmp:true, stock:'satilik' },
+      { no:'NHT-031', cat:'Elektrikli Aletler', brand:'Makita', model:'MLT100N Yatar Testere', spec:'260 mm · 1500 W · sehpalı', cond:'Sıfır', price:40000, market:47200, cmp:true, stock:'satilik' },
+      { no:'NHT-018', cat:'Iskarpelalar', brand:'Vintage (restore edildi)', model:'Düz Japon Set', spec:'6/14/18/22/30/30 mm · beyaz çelik', cond:'Sıfır', price:20000, market:0, cmp:false, stock:'satilik' },
+      { no:'NHT-003', cat:'Rendeler', brand:'Kunz', model:'No 4 Kaba Rende', spec:'245 × 50 mm', cond:'Kullanılmış', price:2800, market:3900, cmp:true, stock:'satilik' },
+      { no:'NHT-022', cat:'Bileme & İşaretleme', brand:'Shapton', model:'Bileme Taşı', spec:'#1000 / #6000 · su taşı', cond:'Az kullanılmış', price:3200, market:4100, cmp:true, stock:'satilik' },
+      { no:'NHT-009', cat:'El Testereleri', brand:'Wisent', model:'Ryoba', spec:'24 cm · çift ağızlı', cond:'Kullanılmış', price:600, market:950, cmp:true, stock:'satilik' },
+      { no:'NHT-042', cat:'Diğer', brand:'Atölye Fehmi', model:'Taşınabilir Tezgah', spec:'600 × 700 mm · kayın · mengeneli', cond:'Kullanılmış', price:17500, market:0, cmp:false, stock:'satilik' },
+      { no:'NHT-025', cat:'Bileme & İşaretleme', brand:'Veritas', model:'İşaretleme Bıçağı', spec:'sağ/sol ağız · pirinç sap', cond:'Sıfır', price:1450, market:1800, cmp:true, stock:'satilik' },
+      { no:'NHT-011', cat:'El Testereleri', brand:'Gyokucho', model:'Kataba', spec:'27 cm · yedek ağızlı', cond:'Sıfır', price:2900, market:3400, cmp:true, stock:'satilik' },
+      { no:'NHT-005', cat:'Rendeler', brand:'Record', model:'No 78 Kenar Rendesi', spec:'250 × 40 mm · dayamalı', cond:'Kullanılmış', price:3400, market:4200, cmp:true, stock:'ayrildi' },
+      { no:'NHT-047', cat:'Diğer', brand:'Nicholson', model:'Eğe Seti 5’li', spec:'yarım yuvarlak / düz / üçgen', cond:'Kullanılmış', price:900, market:1200, cmp:true, stock:'satilik' },
+      { no:'NHT-055', cat:'İşkenceler', brand:'Bessey', model:'K-Body İşkence', spec:'100 cm · 2 adet', cond:'Kullanılmış', price:2400, market:3100, cmp:true, stock:'satildi' },
+      { no:'NHT-034', cat:'Elektrikli Aletler', brand:'Festool', model:'OF 1010 Freze', spec:'1010 W · çantalı', cond:'Kullanılmış', price:22000, market:26500, cmp:true, stock:'satildi' }
+    ];
+  }
+
+  tl(n) { return n.toLocaleString('tr-TR') + ' TL'; }
+
+  view(it) {
+    const sold = it.stock === 'satildi', res = it.stock === 'ayrildi';
+    const showCmp = !!(it.cmp && it.market && (this.props.showMarketCompare ?? true));
+    const dot = it.cond === 'Sıfır'
+      ? { background:'#8A6B1E', border:'1.5px solid #8A6B1E' }
+      : it.cond === 'Az kullanılmış'
+        ? { background:'transparent', border:'1.5px solid #8A6B1E' }
+        : { background:'transparent', border:'1.5px solid #6B7176' };
+    const stockTag = sold ? 'SATILDI' : res ? 'AYRILDI' : false;
+    return {
+      no: (this.props.showInventoryNumbers ?? true) ? it.no : '',
+      cat: it.cat, brand: it.brand, model: it.model, spec: it.spec, cond: it.cond,
+      priceFmt: this.tl(it.price),
+      marketFmt: it.market ? this.tl(it.market) : '',
+      disc: it.market ? '−' + Math.round((1 - it.price / it.market) * 100) + '%' : '',
+      showCmp,
+      photoLabel: 'FOTO · 4:5',
+      stockTag,
+      stockStyle: {
+        position:'absolute', top:'8px', left:'8px', fontFamily:"'IBM Plex Mono',monospace", fontSize:'10px',
+        letterSpacing:'0.12em', padding:'3px 7px', borderRadius:'2px',
+        background: sold ? '#6B7176' : '#17191A', color:'#FAFAF8'
+      },
+      dotStyle: Object.assign({ width:'8px', height:'8px', borderRadius:'50%', display:'inline-block', flex:'0 0 auto' }, dot),
+      wrapStyle: {
+        display:'flex', flexDirection:'column', background:'#FAFAF8', color:'#17191A', border:'1px solid #C9CBC4',
+        opacity: sold ? 0.55 : 1, filter: sold ? 'grayscale(1)' : 'none'
+      },
+      photoStyle: {
+        position:'relative', aspectRatio:'4 / 5', display:'flex', alignItems:'center', justifyContent:'center',
+        background:'repeating-linear-gradient(135deg,#DEDFDA 0 6px,#E7E8E3 6px 12px)', borderBottom:'1px solid #C9CBC4'
+      },
+      rowStyle: {
+        display:'flex', gap:'12px', padding:'14px 16px', background:'#FAFAF8', color:'#17191A',
+        opacity: sold ? 0.55 : 1, filter: sold ? 'grayscale(1)' : 'none'
+      },
+      thumbStyle: {
+        position:'relative', flex:'0 0 96px', width:'96px', aspectRatio:'4 / 5', display:'flex',
+        alignItems:'center', justifyContent:'center', border:'1px solid #C9CBC4',
+        background:'repeating-linear-gradient(135deg,#DEDFDA 0 6px,#E7E8E3 6px 12px)'
+      }
+    };
+  }
+
+  catDefs() {
+    return [
+      { key:'tumu', label:'Tümü', count:54 },
+      { key:'Rendeler', label:'Rendeler', count:4 },
+      { key:'El Testereleri', label:'El Testereleri', count:9 },
+      { key:'Iskarpelalar', label:'Iskarpelalar', count:12 },
+      { key:'Bileme & İşaretleme', label:'Bileme & İşaretleme', count:10 },
+      { key:'Elektrikli Aletler', label:'Elektrikli Aletler', count:14 },
+      { key:'İşkenceler', label:'İşkenceler', count:0 },
+      { key:'Diğer', label:'Diğer', count:5 }
+    ];
+  }
+
+  chips(active, set, big) {
+    return this.catDefs().map(c => {
+      const on = c.key === active, dead = c.count === 0;
+      return {
+        label: c.label, count: c.count,
+        pick: () => set(c.key),
+        chipStyle: {
+          display:'flex', alignItems:'center', gap:'7px', whiteSpace:'nowrap', cursor: dead ? 'default' : 'pointer',
+          height: big ? '44px' : '36px', padding: big ? '0 14px' : '0 13px', borderRadius:'2px',
+          fontSize: big ? '14px' : '13.5px', fontWeight: on ? 600 : 400,
+          background: on ? '#17191A' : '#FAFAF8', color: on ? '#FAFAF8' : (dead ? '#9BA09C' : '#17191A'),
+          border: '1px solid ' + (on ? '#17191A' : '#C9CBC4'), opacity: dead ? 0.6 : 1
+        },
+        countStyle: {
+          fontFamily:"'IBM Plex Mono',monospace", fontSize:'11px',
+          color: on ? '#B9BCB6' : '#6B7176'
+        }
+      };
+    });
+  }
+
+  filter(cat, q, sort, sold) {
+    const s = q.trim().toLocaleLowerCase('tr');
+    let out = this.data().filter(it => {
+      if (cat !== 'tumu' && it.cat !== cat) return false;
+      if (!sold && it.stock === 'satildi') return false;
+      if (!s) return true;
+      return (it.brand + ' ' + it.model + ' ' + it.cat + ' ' + it.spec).toLocaleLowerCase('tr').includes(s);
+    });
+    out.sort((a, b) => sort === 'asc' ? a.price - b.price : b.price - a.price);
+    return out;
+  }
+
+  track(on) {
+    return { width:'34px', height:'20px', borderRadius:'10px', background: on ? '#8A6B1E' : '#C9CBC4',
+      display:'flex', alignItems:'center', padding:'2px', transition:'background .15s',
+      justifyContent: on ? 'flex-end' : 'flex-start', flex:'0 0 auto' };
+  }
+  knob() { return { width:'16px', height:'16px', borderRadius:'50%', background:'#FAFAF8', display:'block' }; }
+
+  renderVals() {
+    const soldDefault = this.props.showSoldDefault ?? false;
+    const dSold = this.state.sold || soldDefault;
+    const mSold = this.state.msold || soldDefault;
+    const dList = this.filter(this.state.cat, this.state.q, this.state.sort, dSold);
+    const mList = this.filter(this.state.mcat, this.state.mq, this.state.msort, mSold);
+    const sum = dList.filter(i => i.stock !== 'satildi').reduce((a, i) => a + i.price, 0);
+    const btn = on => ({ padding:'0 12px', background: on ? '#17191A' : '#FAFAF8', color: on ? '#FAFAF8' : '#17191A',
+      border:'0', borderRight:'1px solid #C9CBC4', fontFamily:"'IBM Plex Mono',monospace", fontSize:'13px', cursor:'pointer' });
+
+    return {
+      cats: this.chips(this.state.cat, k => this.setState({ cat: k }), false),
+      mCats: this.chips(this.state.mcat, k => this.setState({ mcat: k }), true),
+      items: dList.map(i => this.view(i)),
+      mItems: mList.map(i => this.view(i)),
+      similar: this.data().filter(i => i.cat === 'Rendeler' && i.no !== 'NHT-001').slice(0, 4).map(i => this.view(i)),
+      onSearch: e => this.setState({ q: e.target.value }),
+      onSearchM: e => this.setState({ mq: e.target.value }),
+      sortAsc: () => this.setState({ sort: 'asc' }),
+      sortDesc: () => this.setState({ sort: 'desc' }),
+      sortAscStyle: btn(this.state.sort === 'asc'),
+      sortDescStyle: Object.assign(btn(this.state.sort === 'desc'), { borderRight: '0' }),
+      mSortToggle: () => this.setState({ msort: this.state.msort === 'asc' ? 'desc' : 'asc' }),
+      mSortLabel: this.state.msort === 'asc' ? 'Fiyat ↑' : 'Fiyat ↓',
+      toggleSold: () => this.setState({ sold: !this.state.sold }),
+      mToggleSold: () => this.setState({ msold: !this.state.msold }),
+      switchTrack: this.track(dSold), switchKnob: this.knob(),
+      mSwitchTrack: this.track(mSold), mSwitchKnob: this.knob(),
+      resultLine: dList.length + ' alet' + (this.state.cat === 'tumu' ? '' : ' · ' + this.state.cat),
+      mResultLine: mList.length + ' alet listeleniyor',
+      totalLine: 'Listelenen satılık toplamı ' + this.tl(sum),
+      specs: [
+        { k:'Cinsi', v:'Ahşap rendesi' },
+        { k:'Marka', v:'Stanley' },
+        { k:'Model', v:'No 5 (Jack plane)' },
+        { k:'Ebat', v:'360 × 60 × 130 mm' },
+        { k:'Malzeme', v:'Dökme demir gövde · ceviz sap' },
+        { k:'Durum', v:'Kullanılmış · ağzı düz, taban taşlanmış' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

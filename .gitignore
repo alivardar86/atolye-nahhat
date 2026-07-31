@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# Next.js
+.next/
+
+# Env
+.env*
+
+# Vercel
+.vercel/
+
+# OS
+.DS_Store
+
+# Claude Code local settings (per-machine, not shared)
+.claude/settings.local.json
