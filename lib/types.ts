@@ -43,6 +43,16 @@ export interface UrunFoto {
   sira: number;
 }
 
+export type EtkilesimTip = "goruntuleme" | "whatsapp_tik";
+
+// Mirrors the urun_etkilesim table (db/migrations/0002_urun_etkilesim.sql).
+export interface UrunEtkilesim {
+  id: string;
+  urun_id: string;
+  tip: EtkilesimTip;
+  created_at: string;
+}
+
 // Mirrors the urunler table directly (db/supabase-schema.sql) — the panel's
 // read/write model, as opposed to v_urun_kart which is public-page-only.
 export interface Urun {

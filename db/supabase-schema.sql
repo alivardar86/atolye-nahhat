@@ -77,6 +77,16 @@ create table if not exists urun_fotograflari (
 );
 create index if not exists fotograf_urun_idx on urun_fotograflari(urun_id, sira);
 
+-- ---------- etkileşimler (self-hosted analytics — bkz. db/migrations/0002) ----------
+create table if not exists urun_etkilesim (
+  id         uuid primary key default uuid_generate_v4(),
+  urun_id    uuid not null references urunler(id) on delete cascade,
+  tip        text not null check (tip in ('goruntuleme', 'whatsapp_tik')),
+  created_at timestamptz not null default now()
+);
+create index if not exists etkilesim_urun_tip_zaman_idx
+  on urun_etkilesim(urun_id, tip, created_at);
+
 -- ---------- updated_at trigger ----------
 create or replace function set_updated_at() returns trigger as $$
 begin new.updated_at = now(); return new; end;
@@ -92,6 +102,7 @@ create trigger urunler_updated_at before update on urunler
 alter table kategoriler       enable row level security;
 alter table urunler           enable row level security;
 alter table urun_fotograflari enable row level security;
+alter table urun_etkilesim    enable row level security;
 
 drop policy if exists "herkes kategorileri okur" on kategoriler;
 create policy "herkes kategorileri okur" on kategoriler
@@ -116,6 +127,16 @@ create policy "panel urun yazar" on urunler
 drop policy if exists "panel fotograf yazar" on urun_fotograflari;
 create policy "panel fotograf yazar" on urun_fotograflari
   for all using (auth.role() = 'authenticated') with check (auth.role() = 'authenticated');
+
+-- Public pages log views/clicks anonymously — insert-only, no read access.
+drop policy if exists "herkes etkilesim ekler" on urun_etkilesim;
+create policy "herkes etkilesim ekler" on urun_etkilesim
+  for insert with check (true);
+
+-- Only the panel (logged-in owner) reads aggregate counts.
+drop policy if exists "panel etkilesim okur" on urun_etkilesim;
+create policy "panel etkilesim okur" on urun_etkilesim
+  for select using (auth.role() = 'authenticated');
 
 -- ============================================================
 -- Storage — fotoğraf bucket'ı

@@ -4,9 +4,10 @@ import { supabase, fotoUrl } from "@/lib/supabase";
 import { UrunKart, UrunFoto } from "@/lib/types";
 import { formatPrice } from "@/lib/format";
 import { CONDITION_LABEL } from "@/lib/labels";
-import { whatsappUrl } from "@/lib/whatsapp";
 import { ProductGallery } from "@/components/ProductGallery";
 import { ProductGrid } from "@/components/ProductGrid";
+import { ViewLogger } from "@/components/ViewLogger";
+import { WhatsappCta } from "@/components/WhatsappCta";
 
 export const revalidate = 60;
 
@@ -98,6 +99,7 @@ export default async function ProductPage({ params }: Props) {
 
   return (
     <>
+      <ViewLogger urunId={product.id} />
       <div className="px-nh-16 sm:px-nh-40 py-nh-24 sm:py-nh-40 sm:grid sm:grid-cols-[1.05fr_1fr] sm:gap-nh-56">
         <ProductGallery photos={photos} title={title} />
 
@@ -145,15 +147,9 @@ export default async function ProductPage({ params }: Props) {
                 Satıldı
               </div>
             ) : (
-              <a
-                href={whatsappUrl(waMessage)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-nh-18 h-nh-52 flex items-center justify-center gap-nh-10 bg-ink hover:bg-ink-hover text-paper font-semibold text-xl rounded-nh"
-              >
-                <span className="w-2 h-2 rounded-full bg-success inline-block" />
+              <WhatsappCta urunId={product.id} message={waMessage}>
                 WhatsApp&apos;tan sor — {formatPrice(product.satis_fiyat)}
-              </a>
+              </WhatsappCta>
             )}
             <div className="text-center font-mono text-sm text-muted mt-nh-10">
               Telefonu kendi açar. Genelde 1 saat içinde döner.
