@@ -19,7 +19,7 @@ export default function HakkindaPage() {
       </h1>
 
       <p className="font-serif italic text-lg-plus sm:text-2xl leading-relaxed text-body mt-nh-18 sm:mt-nh-24">
-        Adım Fehmi. Ahşabı elle işlemeyi, oyup yontmayı bu aletlerle öğrendim
+        Adım Levent. Ahşabı elle işlemeyi, oyup yontmayı bu aletlerle öğrendim
         — şimdi atölyeyi kapatıyorum ve onları bırakıyorum.
       </p>
 
