@@ -42,3 +42,26 @@ export interface UrunFoto {
   alt_metin: string | null;
   sira: number;
 }
+
+// Mirrors the urunler table directly (db/supabase-schema.sql) — the panel's
+// read/write model, as opposed to v_urun_kart which is public-page-only.
+export interface Urun {
+  id: string;
+  slug: string;
+  kategori_slug: string;
+  cinsi: string;
+  malzeme: string | null;
+  marka: string | null;
+  model: string | null;
+  ebat: string | null;
+  durum: UrunDurum | null;
+  aciklama: string | null;
+  piyasa_fiyat: number | null;
+  piyasa_kaynak: string | null;
+  satis_fiyat: number;
+  fiyat_karsilastir: boolean;
+  adet: number;
+  stok_durumu: StokDurum;
+  one_cikan: boolean;
+  sira: number;
+}
