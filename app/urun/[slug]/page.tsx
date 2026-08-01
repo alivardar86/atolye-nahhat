@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Link from "next/link";
 import { supabase, fotoUrl } from "@/lib/supabase";
 import { UrunKart, UrunFoto } from "@/lib/types";
 import { formatPrice } from "@/lib/format";
@@ -99,13 +98,6 @@ export default async function ProductPage({ params }: Props) {
 
   return (
     <>
-      <div className="border-b border-border px-nh-16 sm:px-nh-40 h-12 sm:h-16 flex items-center gap-nh-10 font-mono text-sm text-muted">
-        <Link href="/" className="text-ink hover:text-accent">
-          ← Katalog
-        </Link>
-        <span>/ {product.kategori_ad}</span>
-      </div>
-
       <div className="px-nh-16 sm:px-nh-40 py-nh-24 sm:py-nh-40 sm:grid sm:grid-cols-[1.05fr_1fr] sm:gap-nh-56">
         <ProductGallery photos={photos} title={title} />
 

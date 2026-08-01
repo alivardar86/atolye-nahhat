@@ -59,7 +59,7 @@ export function Catalog({
 
   return (
     <section>
-      <div className="sticky top-0 z-10 bg-panel border-b border-border px-nh-16 sm:px-nh-40 py-nh-14 flex flex-wrap items-center gap-nh-14">
+      <div className="sticky top-nh-52 sm:top-16 z-10 bg-panel border-b border-border px-nh-16 sm:px-nh-40 py-nh-14 flex flex-wrap items-center gap-nh-14">
         <CategoryChips chips={chips} active={activeCategory} onSelect={setActiveCategory} />
         <div className="flex-1 min-w-45" />
         <SearchInput value={query} onChange={setQuery} />

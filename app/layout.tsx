@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Archivo, IBM_Plex_Mono, Source_Serif_4 } from "next/font/google";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 import "./globals.css";
 
 // Primary sans — body copy, headings, UI chrome.
@@ -39,7 +41,11 @@ export default function RootLayout({
       lang="tr"
       className={`${archivo.variable} ${ibmPlexMono.variable} ${sourceSerif4.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <Header />
+        <main className="flex-1 flex flex-col">{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }
