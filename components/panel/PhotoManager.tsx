@@ -89,13 +89,13 @@ export function PhotoManager({
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-nh-14 mt-nh-16">
           {photos.map((foto, i) => (
             <div key={foto.id} className="border border-border rounded-nh overflow-hidden bg-paper">
-              <div className="relative aspect-square">
+              <div className="relative aspect-square bg-panel">
                 <Image
                   src={fotoUrl(foto.storage_yolu)}
                   alt={foto.alt_metin ?? ""}
                   fill
                   sizes="200px"
-                  className="object-cover"
+                  className="object-contain"
                 />
                 {i === 0 && (
                   <span className="absolute top-nh-6 left-nh-6 bg-ink text-paper text-2xs font-mono uppercase tracking-nh-wide px-nh-6 py-nh-2 rounded-nh">

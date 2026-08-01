@@ -20,7 +20,7 @@ export function ProductGallery({
   if (photos.length === 0) {
     return (
       <div
-        className={`relative aspect-4/5 border border-border flex items-center justify-center ${PLACEHOLDER_BG}`}
+        className={`relative h-[45vh] sm:h-[60vh] max-h-[600px] min-h-[280px] border border-border flex items-center justify-center ${PLACEHOLDER_BG}`}
       >
         <span className="font-mono text-xs tracking-nh-eyebrow text-placeholder">
           FOTO · 4:5
@@ -31,13 +31,13 @@ export function ProductGallery({
 
   return (
     <div className="flex flex-col gap-nh-12">
-      <div className="relative aspect-4/5 border border-border overflow-hidden">
+      <div className="relative h-[45vh] sm:h-[60vh] max-h-[600px] min-h-[280px] border border-border overflow-hidden bg-panel">
         <Image
           src={fotoUrl(photos[active].storage_yolu)}
           alt={photos[active].alt_metin ?? title}
           fill
           sizes="(min-width: 640px) 50vw, 100vw"
-          className="object-cover"
+          className="object-contain"
           priority
         />
       </div>
@@ -50,7 +50,7 @@ export function ProductGallery({
               onClick={() => setActive(i)}
               aria-label={`Fotoğraf ${i + 1}`}
               aria-current={i === active}
-              className={`relative aspect-square border overflow-hidden ${
+              className={`relative aspect-square bg-panel border overflow-hidden ${
                 i === active ? "border-ink" : "border-border"
               }`}
             >
@@ -59,7 +59,7 @@ export function ProductGallery({
                 alt={foto.alt_metin ?? `${title} ${i + 1}`}
                 fill
                 sizes="120px"
-                className="object-cover"
+                className="object-contain"
               />
             </button>
           ))}
