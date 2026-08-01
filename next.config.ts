@@ -15,6 +15,13 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  experimental: {
+    serverActions: {
+      // Default is 1MB; a single resized (max 1600px) photo can exceed that.
+      // Photos upload one at a time, so this stays generous but bounded.
+      bodySizeLimit: "4mb",
+    },
+  },
 };
 
 export default nextConfig;
