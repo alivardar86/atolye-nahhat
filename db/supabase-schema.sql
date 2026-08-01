@@ -142,7 +142,7 @@ create policy "foto panel siler" on storage.objects
 create or replace view v_urun_kart as
 select
   u.id, u.slug, u.kategori_slug, k.ad as kategori_ad,
-  u.cinsi, u.marka, u.model, u.ebat, u.durum, u.aciklama,
+  u.cinsi, u.malzeme, u.marka, u.model, u.ebat, u.durum, u.aciklama,
   u.satis_fiyat,
   case when u.fiyat_karsilastir and u.piyasa_fiyat > u.satis_fiyat
        then u.piyasa_fiyat end as gosterilecek_piyasa_fiyat,

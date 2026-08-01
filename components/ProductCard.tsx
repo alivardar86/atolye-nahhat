@@ -1,12 +1,7 @@
 import Link from "next/link";
 import { UrunKart } from "@/lib/types";
 import { formatPrice } from "@/lib/format";
-
-const CONDITION_LABEL: Record<string, string> = {
-  sifir: "Sıfır",
-  az_kullanilmis: "Az kullanılmış",
-  kullanilmis: "Kullanılmış",
-};
+import { CONDITION_LABEL } from "@/lib/labels";
 
 export function ProductCard({ product: p }: { product: UrunKart }) {
   const sold = p.stok_durumu === "satildi";

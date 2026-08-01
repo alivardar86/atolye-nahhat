@@ -9,6 +9,8 @@ export interface UrunKart {
   kategori_slug: string;
   kategori_ad: string;
   cinsi: string;
+  // Present once db/migrations/0001_v_urun_kart_add_malzeme.sql has been run.
+  malzeme?: string | null;
   marka: string | null;
   model: string | null;
   ebat: string | null;
@@ -30,4 +32,13 @@ export interface Kategori {
   aciklama: string | null;
   sira: number;
   aktif: boolean;
+}
+
+// Mirrors the urun_fotograflari table (db/supabase-schema.sql).
+export interface UrunFoto {
+  id: string;
+  urun_id: string;
+  storage_yolu: string;
+  alt_metin: string | null;
+  sira: number;
 }
