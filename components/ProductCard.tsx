@@ -1,7 +1,9 @@
 import Link from "next/link";
+import Image from "next/image";
 import { UrunKart } from "@/lib/types";
 import { formatPrice } from "@/lib/format";
 import { CONDITION_LABEL } from "@/lib/labels";
+import { fotoUrl } from "@/lib/supabase";
 
 export function ProductCard({ product: p }: { product: UrunKart }) {
   const sold = p.stok_durumu === "satildi";
@@ -28,9 +30,19 @@ export function ProductCard({ product: p }: { product: UrunKart }) {
       }`}
     >
       <div className="relative w-24 sm:w-full shrink-0 aspect-4/5 flex items-center justify-center sm:border-b sm:border-border bg-[repeating-linear-gradient(135deg,var(--color-placeholder-stripe)_0px_6px,var(--color-panel)_6px_12px)]">
-        <span className="font-mono text-2xs tracking-nh-wide-lg-plus text-placeholder">
-          FOTO · 4:5
-        </span>
+        {p.kapak_foto ? (
+          <Image
+            src={fotoUrl(p.kapak_foto)}
+            alt={p.marka ?? p.cinsi}
+            fill
+            sizes="(min-width: 640px) 300px, 96px"
+            className="object-cover"
+          />
+        ) : (
+          <span className="font-mono text-2xs tracking-nh-wide-lg-plus text-placeholder">
+            FOTO · 4:5
+          </span>
+        )}
         {stockTag && (
           <span
             className={`absolute top-2 left-2 font-mono text-2xs tracking-nh-wide-lg px-nh-7 py-[3px] rounded-nh text-paper ${

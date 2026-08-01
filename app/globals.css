@@ -117,32 +117,47 @@
   --radius-pill: 10px; /* literal handoff value for the toggle-switch track */
 }
 
-* {
-  box-sizing: border-box;
-}
+/*
+ * These base element rules must live inside Tailwind's `base` layer.
+ * Un-layered CSS always wins over layered CSS regardless of specificity, so
+ * an un-layered `a { color: ... }` here would silently override utility
+ * classes like `text-paper` on every link (this previously made WhatsApp CTA
+ * text invisible against its dark `bg-ink` background).
+ */
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
 
-a {
-  color: var(--color-ink);
-  text-decoration: none;
-}
+  a {
+    color: var(--color-ink);
+    text-decoration: none;
+  }
 
-a:hover {
-  color: var(--color-accent);
-}
+  a:hover {
+    color: var(--color-accent);
+  }
 
-input,
-button {
-  font: inherit;
-}
+  input,
+  button {
+    font: inherit;
+  }
 
-:focus-visible {
-  outline: 2px solid var(--color-accent);
-  outline-offset: 2px;
-}
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+  }
 
-::selection {
-  background: var(--color-accent);
-  color: var(--color-paper);
+  ::selection {
+    background: var(--color-accent);
+    color: var(--color-paper);
+  }
+
+  body {
+    background: var(--color-bg);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -150,10 +165,4 @@ button {
     transition: none !important;
     animation: none !important;
   }
-}
-
-body {
-  background: var(--color-bg);
-  color: var(--color-ink);
-  font-family: var(--font-sans);
 }
