@@ -53,7 +53,7 @@ Current data: 108 rows — 54 `satilik`, 7 `ayrildi`, 47 `satildi`.
 
 Public:
 - `/` — hero, category chips with counts, search, price sort, "Satılanları da göster"
-  toggle (default off), product grid
+  toggle (default on), product grid
 - `/urun/[slug]` — gallery, spec table, price block, owner's note, WhatsApp CTA,
   similar tools. Needs proper `generateMetadata` with Open Graph — these links get
   pasted into Facebook groups and WhatsApp.

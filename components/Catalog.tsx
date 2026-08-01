@@ -19,7 +19,7 @@ export function Catalog({
   const [activeCategory, setActiveCategory] = useState("tumu");
   const [query, setQuery] = useState("");
   const [sort, setSort] = useState<"asc" | "desc">("asc");
-  const [showSold, setShowSold] = useState(false);
+  const [showSold, setShowSold] = useState(true);
 
   // Chip counts are static — "kaç tanesi satılık" per category — independent
   // of the sold-toggle and any active filter/search/sort state.
