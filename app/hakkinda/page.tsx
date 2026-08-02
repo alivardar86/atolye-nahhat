@@ -4,7 +4,7 @@ import { whatsappUrl } from "@/lib/whatsapp";
 export const metadata: Metadata = {
   title: "Hakkında — Atölye Nahhat",
   description:
-    "Otuz iki yıllık bir el aleti atölyesinin hikayesi ve neden kapandığı.",
+    "On yıllık bir el aleti atölyesinin hikayesi ve neden kapandığı.",
 };
 
 export default function HakkindaPage() {
@@ -15,7 +15,7 @@ export default function HakkindaPage() {
       </div>
 
       <h1 className="m-0 text-6xl sm:text-9xl font-bold leading-[1.1] tracking-nh-tight-lg sm:tracking-nh-tighter text-balance">
-        Otuz iki yıllık bir atölyenin son sayfası.
+        On yıllık bir atölyenin son sayfası.
       </h1>
 
       <p className="font-serif italic text-lg-plus sm:text-2xl leading-relaxed text-body mt-nh-18 sm:mt-nh-24">

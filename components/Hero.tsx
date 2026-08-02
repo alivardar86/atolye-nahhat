@@ -16,7 +16,7 @@ export function Hero({ stats }: { stats: HeroStats }) {
             Atölye kapanıyor · envanter satışı
           </div>
           <h1 className="m-0 text-6xl sm:text-10xl font-bold leading-[1.1] tracking-nh-tight-lg sm:tracking-nh-tighter max-w-[15ch] text-balance">
-            Otuz iki yıl bu aletlerle çalıştım. Şimdi sırası gelen ustaya bırakıyorum.
+            On yıl bu aletlerle çalıştım. Şimdi sırası gelen ustaya bırakıyorum.
           </h1>
           <p className="font-serif italic text-lg-plus sm:text-2xl leading-relaxed text-body mt-nh-14 sm:mt-nh-22 max-w-[52ch]">
             Hepsini tek tek elimden geçirdim, bilediklerini biledim, kırığını
