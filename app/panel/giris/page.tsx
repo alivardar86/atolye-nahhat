@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useActionState } from "react";
 import { signIn } from "@/lib/panel/auth-actions";
 
@@ -7,7 +8,14 @@ export default function GirisPage() {
   const [error, action, pending] = useActionState(signIn, null);
 
   return (
-    <div className="flex-1 flex items-center justify-center px-nh-16 py-nh-40">
+    <div className="flex-1 flex flex-col items-center justify-center px-nh-16 py-nh-40">
+      <Image
+        src="/logo/nahhat-logo-black.png"
+        alt="Atölye Nahhat"
+        width={1485}
+        height={920}
+        className="h-nh-56 w-auto mb-nh-24"
+      />
       <form
         action={action}
         className="w-full max-w-sm bg-paper border border-border rounded-nh p-nh-24"

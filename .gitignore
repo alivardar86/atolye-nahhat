@@ -13,6 +13,9 @@ node_modules/
 # OS
 .DS_Store
 
+# Local visual QA scratch files (dev logs, preview screenshots)
+.visual-test/
+
 # Owner's personal working files (inventory spreadsheet, source photos) —
 # not part of the site, never committed
 Files/

@@ -27,6 +27,7 @@ const sourceSerif4 = Source_Serif_4({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://atolyenahhat.com"),
   title: "Atölye Nahhat",
   description: "Atölye Nahhat el aletleri kataloğu",
 };
