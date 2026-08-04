@@ -14,6 +14,24 @@ const nextConfig: NextConfig = {
         pathname: "/storage/v1/object/public/**",
       },
     ],
+    // Single format instead of ['image/avif', 'image/webp'] halves the
+    // transformation count per image.
+    formats: ["image/webp"],
+    // Fixed quality instead of Next's default range so different quality
+    // requests don't each count as a separate transformation.
+    qualities: [75],
+    // Matches the actual rendered widths used across the site:
+    // ProductCard (96px mobile / 300px desktop) and ProductGallery
+    // thumbnails (120px). See components/ProductCard.tsx and
+    // components/ProductGallery.tsx.
+    imageSizes: [96, 120, 300],
+    // Matches real breakpoints needed by ProductGallery's viewport-based
+    // main image (`50vw` desktop / `100vw` mobile), instead of Next's
+    // 8-value default array.
+    deviceSizes: [420, 750, 1080, 1920],
+    // Tool photos rarely change once uploaded; cache transformed images for
+    // 31 days to avoid re-transforming the same image repeatedly.
+    minimumCacheTTL: 2678400,
   },
   experimental: {
     serverActions: {

@@ -96,6 +96,7 @@ export function PhotoManager({
                   fill
                   sizes="200px"
                   className="object-contain"
+                  unoptimized
                 />
                 {i === 0 && (
                   <span className="absolute top-nh-6 left-nh-6 bg-ink text-paper text-2xs font-mono uppercase tracking-nh-wide px-nh-6 py-nh-2 rounded-nh">
