@@ -141,6 +141,7 @@ export default async function ProductPage({ params }: Props) {
                 Aynı alet bugün internette {formatPrice(product.gosterilecek_piyasa_fiyat!)}.
               </div>
             )}
+            <div className="font-mono text-sm text-muted mt-nh-8">Kargo: alıcı öder.</div>
 
             {sold ? (
               <div className="mt-nh-18 h-nh-52 flex items-center justify-center bg-panel text-muted font-semibold text-xl rounded-nh">
